@@ -2,9 +2,11 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load model and scaler
-model = joblib.load("models/churn_model.pkl")
-scaler = joblib.load("models/scaler.pkl")
+# Load model
+pipeline = joblib.load("models/churn_pipeline.pkl")
+
+churn_prob = pipeline.predict_proba(input_df)[0][1]
+
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
 
