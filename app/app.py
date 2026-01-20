@@ -4,7 +4,7 @@ import joblib
 
 st.set_page_config(page_title="Customer Churn Predictor", layout="centered")
 
-pipeline = joblib.load("../models/churn_pipeline.pkl")
+pipeline = joblib.load("models/churn_pipeline.pkl")
 
 st.title("📉 Customer Churn Prediction App")
 st.write("Predict customer churn using subscription and service details.")
